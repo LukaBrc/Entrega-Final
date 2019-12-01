@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <link rel="stylesheet" href="icons/icons.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="styles.css">
+       <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+       <script src="scripts.js"></script>
+       <title>Super Tienda</title>
+</head>
+<body>
+       <header>
+              <div id="logoT"><span id="logoText">Súper Tienda</span></div>
+              <h1 id="topTitle">Súper Inicio</h1>
+              <button class="fa fa-bars" id="navBtn"></button>
+       </header>
+       <section id="secIni">
+              <div class="sideMenu">
+                            <ul class="sideUl">
+                                   <li class="closeBtn">&times;</li>
+                                   <li class="sider sideInic">Inicio</li>
+                                   <li class="sider sideProduc">Productos</li>
+                                   <li class="sider sideContac">Contacto</li>
+                            </ul>
+              </div>
+              <div id="welcomeTxt">
+                     <div id="miniClose">&times;</div>
+                     Bienvenido a Súper Tienda! <br> Utiliza el menu para navegar por nuestro Súper Sitio!
+              </div>
+              <div id="videoCont">
+                     <p id="arrowHead">◄</p>
+                     <video src="vid/dcintro.mp4" id="vidintro"></video>
+                     <ul id="vidPlayer">
+                            <li id="backPlayer">Back</li>
+                            <li id="stopPlayer">Stop</li>
+                            <li id="ppPlayer">Play</li>
+                            <li id="fwrdPlayer">Forward</li>
+                            <li id="mutePlayer">Mute</li>
+                            <li id="fullPlayer">Fullscreen</li>
+                     </ul>
+              </div>     
+       </section>
+       <section id="secProdu">
+              <div class="sideMenu">
+                            <ul class="sideUl">
+                                   <li class="closeBtn">&times;</li>
+                                   <li class="sider sideInic">Inicio</li>
+                                   <li class="sider sideProduc">Productos</li>
+                                   <li class="sider sideContac">Contacto</li>
+                            </ul>
+              </div>
+              <div class="slideshow-container">
+                     <div class="product" id="batman">
+                            <div class="product-img">
+                                   <a href="#">
+                                   <img src="img/batmanPic.jpg">
+                                   </a>
+                            </div>
+                            <div class="product-heading">
+                                   <a href="#">
+                                   <h1>Batman</h1>
+                                   </a>
+                            </div>
+                            <div class="product-new-price"><P>U$S 199.99</P></div>
+                            <div class="product-bottom">
+                                   <div class="product-short-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni minima reiciendis ad!</p></div>
+                                   <div class="product-btn"><p><a href="#"></a>Add to Cart</p></div>
+                            </div>
+                     </div>
+                     <div class="product" id="flash">
+                            <div class="product-img">
+                                   <a href="#">
+                                          <img src="img/flashPic.jpg">
+                                   </a>
+                            </div>
+                            <div class="product-heading">
+                                   <a href="#">
+                                          <h1>Flash</h1>
+                                   </a>
+                            </div>
+                            <div class="product-old-price"><P>U$S 199.99</P></div>
+                            <div class="product-new-price"><P>U$S 99.99</P></div>
+                            <div class="product-bottom">
+                                   <div class="product-short-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni minima reiciendis ad!</p></div>
+                                   <div class="product-btn"><p><a href="#"></a>Add to Cart</p></div>
+                            </div>
+                     </div>
+                     <div class="product" id="lexluthor">
+                            <div class="product-img">
+                                   <a href="#">
+                                          <img src="img/lexluthorPic.jpg">
+                                   </a>
+                            </div>
+                            <div class="product-heading">
+                                   <a href="#">
+                                          <h1>Lex Luthor</h1>
+                                   </a>
+                            </div>
+                            <div class="product-new-price"><P>U$S 199.99</P></div>
+                            <div class="product-bottom">
+                                   <div class="product-short-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni minima reiciendis ad!</p></div>
+                                   <div class="product-btn"><p><a href="#"></a>Add to Cart</p></div>
+                            </div>
+                     </div>
+                     <div class="product" id="superman">
+                            <div class="product-img">
+                                   <a href="#">
+                                          <img src="img/supermanPic.jpg">
+                                   </a>
+                            </div>
+                            <div class="product-heading">
+                                   <a href="#">
+                                          <h1>Superman</h1>
+                                   </a>
+                            </div>
+                            <div class="product-new-price"><P>U$S 199.99</P></div>
+                            <div class="product-bottom">
+                                   <div class="product-short-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni minima reiciendis ad!</p></div>
+                                   <div class="product-btn"><p><a href="#"></a>Add to Cart</p></div>
+                            </div>
+                     </div>
+              <a id="leftBtn">&#10094;</a>
+              <a id="rightBtn">&#10095;</a>
+              </div>
+       </section>
+       <section id="secContact">
+              <div class="sideMenu">
+                            <ul class="sideUl">
+                                   <li class="closeBtn">&times;</li>
+                                   <li class="sider sideInic">Inicio</li>
+                                   <li class="sider sideProduc">Productos</li>
+                                   <li class="sider sideContac">Contacto</li>
+                            </ul>
+              </div>
+              <form id="dataCol">
+                     <div id="topTextOne">Nos interesa saber de vos! Contanos en detalle cómo podemos ayudarte?!</div>
+                     <input id="inputNombre" type="text" placeholder="Nombre" maxlength="20" required>
+                     <input id="inputApellido" type="text" placeholder="Apellido" maxlength="20" required>
+                     <br>
+                     <input id="inputMail" type="email" placeholder="E-Mail" required>
+                     <br>
+                     <select class="inputSelect">
+                            <option value="0">Género</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                     </select>
+                     <select class="inputSelect">
+                                   <option value="0">Motivo de contacto</option>
+                                   <option value="Consulta">Consulta</option>
+                                   <option value="Reclamo">Reclamo</option>
+                                   <option value="Pedidio">Pedido</option>
+                                   <option value="Otro">Otro</option>
+                     </select>
+                     <br>
+                     <textarea id="inputMsje" form="dataCol" rows="10" placeholder="Ingrese su mensaje aquí." minlength="50" required></textarea>
+                     <br><br>
+                     <input id="superButton" type="submit" value="Enviar">
+              </form>         
+       </section>
+       <footer>
+              <p id="minium">SúperTienda™ - 2019 - All rights Reserved.</p>
+              <a href="https://www.instagram.com" target="new" class="fa fa-instagram"></a>
+              <a href="https://www.facebook.com" target="new" class="fa fa-facebook"></a>
+              <a href="https://www.twitter.com" target="new" class="fa fa-twitter"></a>
+       </footer>
+</body>
+</html>
