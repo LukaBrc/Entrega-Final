@@ -93,6 +93,15 @@ $(document).ready(function(){
                             $(this).css("color", "black");
                      });
                      customStatus = "hidden";
+              }else if(customStatus2 == "hidden"){
+                     $("#welcomeTxt").animate({right: '50%'});
+                     $("#welcomeTxt").css("color", "black");
+                     $("#miniClose").html("&times;");
+                     $("#arrowHead").html("◄")
+                     $("#vidintro").hide();
+                     $("#vidPlayer").hide();
+                     customStatus2 = "hidden";
+                     customStatus = "showing";
               }else{
                      $("#welcomeTxt").animate({right: '50%'});
                      $("#welcomeTxt").css("color", "black");
