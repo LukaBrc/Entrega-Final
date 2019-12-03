@@ -148,7 +148,7 @@ section{
        left: 98%;
 }
 #videoCont:hover{
-       background-color: darkslategray;
+       background-color: cornflowerblue;
 }
 #arrowHead{
        font-size: 1.7vw;
@@ -168,6 +168,16 @@ section{
 }
 #vidPlayer li {
        display: inline-block;
+}
+.customPlayer{
+       font-size: 25px;
+       margin-top: 3px;
+       width: 10%;
+       height: 27px;
+}
+.customPlayer:hover{
+       color: white;
+       background-color: black;
 }
 #secProdu{
        display: none;

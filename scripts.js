@@ -30,6 +30,18 @@ function validarMail(){
 }
 window.addEventListener("load", validarDatos);
 
+function reproducir(){
+       var miVidIntro = document.querySelector("#vidintro");
+       var playBtn = document.querySelector("#ppPlayer");
+       if (miVidIntro.paused==true){
+              miVidIntro.play();
+              playBtn.innerHTML='<span class="icon-pause2"></span>'
+       }else{
+              miVidIntro.pause();
+              playBtn.innerHTML='<span class="icon-play3"></span>'
+       }
+}
+
 $(document).ready(function(){
        $("#welcomeTxt").animate({right: '50%'});
 });
