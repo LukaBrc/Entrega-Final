@@ -1,3 +1,10 @@
+const miVidIntro = document.querySelector('#vidintro');
+const miPlayBtn = document.querySelector('#ppPlayer');
+const miStopBtn = document.querySelector('#stopPlayer');
+console.log(miVidIntro)
+console.log(miPlayBtn)
+console.log(miStopBtn)
+
 function validarDatos(){
        document.getElementById('inputNombre').addEventListener("input", validarNombre)
        document.getElementById("inputApellido").addEventListener("input", validarApellido)
@@ -30,18 +37,6 @@ function validarMail(){
 }
 window.addEventListener("load", validarDatos);
 
-function reproducir(){
-       var miVidIntro = document.querySelector("#vidintro");
-       var playBtn = document.querySelector("#ppPlayer");
-       if (miVidIntro.paused==true){
-              miVidIntro.play();
-              playBtn.innerHTML='<span class="icon-pause2"></span>'
-       }else{
-              miVidIntro.pause();
-              playBtn.innerHTML='<span class="icon-play3"></span>'
-       }
-}
-
 $(document).ready(function(){
        $("#welcomeTxt").animate({right: '50%'});
 });
@@ -52,7 +47,7 @@ $(document).ready(function(){
 $(document).ready(function(){
        var customStatus = "showing";
        var customStatus2 = "hidden";
-       $("#videoCont").click(function(){
+       $("#arrowHead").click(function(){
               if (customStatus2 == "hidden"){ 
                      $("#welcomeTxt").animate({right: '98.5%'});
                      $("#welcomeTxt").css("color", "white");
@@ -69,6 +64,7 @@ $(document).ready(function(){
                             $(this).css("color", "black");
                      });
                      $("#arrowHead").html("►")
+                     $("#arrowHead").css("width", "3%")
                      $("#videoCont").animate({
                             width: "60%",
                             left: "40%"
@@ -79,6 +75,7 @@ $(document).ready(function(){
                      customStatus2 = "showing";
               }else{
                     $("#arrowHead").html("◄")
+                    $("#arrowHead").css("width", "100%")
                     $("#videoCont").animate({
                             width: "2%",
                             left: "98%"
@@ -110,6 +107,7 @@ $(document).ready(function(){
                      $("#welcomeTxt").css("color", "black");
                      $("#miniClose").html("&times;");
                      $("#arrowHead").html("◄")
+                    $("#arrowHead").css("width", "100%")
                      $("#vidintro").hide();
                      $("#vidPlayer").hide();
                      customStatus2 = "hidden";
@@ -119,6 +117,7 @@ $(document).ready(function(){
                      $("#welcomeTxt").css("color", "black");
                      $("#miniClose").html("&times;");
                      $("#arrowHead").html("◄")
+                     $("#arrowHead").css("width", "3%")
                      $("#videoCont").animate({
                              width: "2%",
                              left: "98%"
@@ -275,5 +274,25 @@ $(document).ready(function(){
               }
        });
 });
+
+function reproducir(){       
+       if (miVidIntro.paused){
+              miVidIntro.play();
+              miPlayBtn.innerHTML='<span class="icon-pause2"></span>'
+       }else{
+              miVidIntro.pause();
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
+       }
+}
+function detener(){
+       if (miVidIntro.paused==true){
+              miVidIntro.currentTime=0;
+       }else{
+              miVidIntro.currentTime=0;
+              miVidIntro.pause();
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
+
+       }
+}
 
 
