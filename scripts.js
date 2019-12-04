@@ -269,6 +269,12 @@ $(document).ready(function(){
 });
 function atrasar(valor){
        var miVidIntro = document.querySelector('#vidintro');
+       var miPlayBtn = document.querySelector('#ppPlayer');
+       if(miVidIntro.currentTime <= 1){
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
+              miVidIntro.pause();
+              miVidIntro.currentTime = 0;
+       }
        miVidIntro.currentTime -= valor;
 }
 function reproducir(){       
@@ -297,9 +303,26 @@ function detener(){
 }
 function adelantar(valor){
        var miVidIntro = document.querySelector('#vidintro');
-       miVidIntro.currentTime += valor;
+       var miPlayBtn = document.querySelector('#ppPlayer');
+       if(miVidIntro.currentTime >= 29){
+              miVidIntro.currentTime=0;
+              miVidIntro.pause();
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
+       }else{
+              miVidIntro.currentTime += valor;
+       }
 
 
 }
-
+function silenciar(){
+       var miVidIntro = document.querySelector('#vidintro');
+       var miSilenBtn = document.querySelector('#mutePlayer')
+       if (miVidIntro.volume==0){
+              miVidIntro.volume = 1;
+              miSilenBtn.innerHTML='<span class="icon-volume-mute2"></span>'
+       }else{
+              miVidIntro.volume = 0;
+              miSilenBtn.innerHTML='<span class="icon-volume-medium"></span>'
+       }
+}
 
