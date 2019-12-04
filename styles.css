@@ -172,12 +172,13 @@ section{
 }
 #vidPlayer{
        list-style: none;
-       display: flexbox;
+       margin: 0;
 }
 #vidPlayer li {
        display: inline-block;
 }
 .customPlayer{
+       
        font-size: 50px;
        margin-top: 3px;
        width: 10%;

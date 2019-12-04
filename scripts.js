@@ -1,10 +1,3 @@
-const miVidIntro = document.querySelector('#vidintro');
-const miPlayBtn = document.querySelector('#ppPlayer');
-const miStopBtn = document.querySelector('#stopPlayer');
-console.log(miVidIntro)
-console.log(miPlayBtn)
-console.log(miStopBtn)
-
 function validarDatos(){
        document.getElementById('inputNombre').addEventListener("input", validarNombre)
        document.getElementById("inputApellido").addEventListener("input", validarApellido)
@@ -117,7 +110,7 @@ $(document).ready(function(){
                      $("#welcomeTxt").css("color", "black");
                      $("#miniClose").html("&times;");
                      $("#arrowHead").html("◄")
-                     $("#arrowHead").css("width", "3%")
+                     $("#arrowHead").css("width", "100%")
                      $("#videoCont").animate({
                              width: "2%",
                              left: "98%"
@@ -274,8 +267,13 @@ $(document).ready(function(){
               }
        });
 });
-
+function atrasar(valor){
+       var miVidIntro = document.querySelector('#vidintro');
+       miVidIntro.currentTime -= valor;
+}
 function reproducir(){       
+       var miVidIntro = document.querySelector('#vidintro');
+       var miPlayBtn = document.querySelector('#ppPlayer');
        if (miVidIntro.paused){
               miVidIntro.play();
               miPlayBtn.innerHTML='<span class="icon-pause2"></span>'
@@ -285,14 +283,23 @@ function reproducir(){
        }
 }
 function detener(){
+       var miVidIntro = document.querySelector('#vidintro');
+       var miPlayBtn = document.querySelector('#ppPlayer');
        if (miVidIntro.paused==true){
               miVidIntro.currentTime=0;
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
        }else{
               miVidIntro.currentTime=0;
               miVidIntro.pause();
               miPlayBtn.innerHTML='<span class="icon-play3"></span>'
 
        }
+}
+function adelantar(valor){
+       var miVidIntro = document.querySelector('#vidintro');
+       miVidIntro.currentTime += valor;
+
+
 }
 
 
