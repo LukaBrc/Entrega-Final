@@ -40,7 +40,7 @@ $(document).ready(function(){
 $(document).ready(function(){
        var customStatus = "showing";
        var customStatus2 = "hidden";
-       $("#videoCont").click(function(){
+       $("#arrowHead").click(function(){
               if (customStatus2 == "hidden"){ 
                      $("#welcomeTxt").animate({right: '98.5%'});
                      $("#welcomeTxt").css("color", "white");
@@ -57,6 +57,7 @@ $(document).ready(function(){
                             $(this).css("color", "black");
                      });
                      $("#arrowHead").html("►")
+                     $("#arrowHead").css("width", "3%")
                      $("#videoCont").animate({
                             width: "60%",
                             left: "40%"
@@ -67,6 +68,7 @@ $(document).ready(function(){
                      customStatus2 = "showing";
               }else{
                     $("#arrowHead").html("◄")
+                    $("#arrowHead").css("width", "100%")
                     $("#videoCont").animate({
                             width: "2%",
                             left: "98%"
@@ -93,11 +95,22 @@ $(document).ready(function(){
                             $(this).css("color", "black");
                      });
                      customStatus = "hidden";
+              }else if(customStatus2 == "hidden"){
+                     $("#welcomeTxt").animate({right: '50%'});
+                     $("#welcomeTxt").css("color", "black");
+                     $("#miniClose").html("&times;");
+                     $("#arrowHead").html("◄")
+                    $("#arrowHead").css("width", "100%")
+                     $("#vidintro").hide();
+                     $("#vidPlayer").hide();
+                     customStatus2 = "hidden";
+                     customStatus = "showing";
               }else{
                      $("#welcomeTxt").animate({right: '50%'});
                      $("#welcomeTxt").css("color", "black");
                      $("#miniClose").html("&times;");
                      $("#arrowHead").html("◄")
+                     $("#arrowHead").css("width", "100%")
                      $("#videoCont").animate({
                              width: "2%",
                              left: "98%"
@@ -254,5 +267,62 @@ $(document).ready(function(){
               }
        });
 });
+function atrasar(valor){
+       var miVidIntro = document.querySelector('#vidintro');
+       var miPlayBtn = document.querySelector('#ppPlayer');
+       if(miVidIntro.currentTime <= 1){
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
+              miVidIntro.pause();
+              miVidIntro.currentTime = 0;
+       }
+       miVidIntro.currentTime -= valor;
+}
+function reproducir(){       
+       var miVidIntro = document.querySelector('#vidintro');
+       var miPlayBtn = document.querySelector('#ppPlayer');
+       if (miVidIntro.paused){
+              miVidIntro.play();
+              miPlayBtn.innerHTML='<span class="icon-pause2"></span>'
+       }else{
+              miVidIntro.pause();
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
+       }
+}
+function detener(){
+       var miVidIntro = document.querySelector('#vidintro');
+       var miPlayBtn = document.querySelector('#ppPlayer');
+       if (miVidIntro.paused==true){
+              miVidIntro.currentTime=0;
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
+       }else{
+              miVidIntro.currentTime=0;
+              miVidIntro.pause();
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
 
+       }
+}
+function adelantar(valor){
+       var miVidIntro = document.querySelector('#vidintro');
+       var miPlayBtn = document.querySelector('#ppPlayer');
+       if(miVidIntro.currentTime >= 29){
+              miVidIntro.currentTime=0;
+              miVidIntro.pause();
+              miPlayBtn.innerHTML='<span class="icon-play3"></span>'
+       }else{
+              miVidIntro.currentTime += valor;
+       }
+
+
+}
+function silenciar(){
+       var miVidIntro = document.querySelector('#vidintro');
+       var miSilenBtn = document.querySelector('#mutePlayer')
+       if (miVidIntro.volume==0){
+              miVidIntro.volume = 1;
+              miSilenBtn.innerHTML='<span class="icon-volume-mute2"></span>'
+       }else{
+              miVidIntro.volume = 0;
+              miSilenBtn.innerHTML='<span class="icon-volume-medium"></span>'
+       }
+}
 

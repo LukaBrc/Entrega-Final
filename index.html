@@ -28,19 +28,18 @@
                             </ul>
               </div>
               <div id="welcomeTxt">
-                     <div id="miniClose">&times;</div>
+                     <div id="miniClose" onclick="detener()">&times;</div>
                      Bienvenido a Súper Tienda! <br> Utiliza el menu para navegar por nuestro Súper Sitio!
               </div>
               <div id="videoCont">
-                     <p id="arrowHead">◄</p>
+                     <p id="arrowHead" onclick="detener()">◄</p>
                      <video src="vid/dcintro.mp4" id="vidintro"></video>
                      <ul id="vidPlayer">
-                            <li id="backPlayer">Back</li>
-                            <li id="stopPlayer">Stop</li>
-                            <li id="ppPlayer">Play</li>
-                            <li id="fwrdPlayer">Forward</li>
-                            <li id="mutePlayer">Mute</li>
-                            <li id="fullPlayer">Fullscreen</li>
+                            <li id="backPlayer" class="customPlayer" onclick="atrasar(5)"><span class="icon-backward2"></span></li>
+                            <li id="ppPlayer" class="customPlayer" onclick="reproducir()"><span class="icon-play3"></span></li>
+                            <li id="stopPlayer" class="customPlayer" onclick="detener()"><span class="icon-stop2"></span></li>
+                            <li id="fwrdPlayer" class="customPlayer" onclick="adelantar(5)"><span class="icon-forward3"></span></li>
+                            <li id="mutePlayer" class="customPlayer" onclick="silenciar()"><span class="icon-volume-mute2"></span></li>
                      </ul>
               </div>     
        </section>
@@ -67,7 +66,7 @@
                             </div>
                             <div class="product-new-price"><P>U$S 199.99</P></div>
                             <div class="product-bottom">
-                                   <div class="product-short-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni minima reiciendis ad!</p></div>
+                                   <div class="product-short-description"><p>Figura de acción coleccionable. Art: Nº2527</p></div>
                                    <div class="product-btn"><p><a href="#"></a>Add to Cart</p></div>
                             </div>
                      </div>
@@ -85,7 +84,7 @@
                             <div class="product-old-price"><P>U$S 199.99</P></div>
                             <div class="product-new-price"><P>U$S 99.99</P></div>
                             <div class="product-bottom">
-                                   <div class="product-short-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni minima reiciendis ad!</p></div>
+                                   <div class="product-short-description"><p>Figura de acción coleccionable. Art: Nº2528</p></div>
                                    <div class="product-btn"><p><a href="#"></a>Add to Cart</p></div>
                             </div>
                      </div>
@@ -102,7 +101,7 @@
                             </div>
                             <div class="product-new-price"><P>U$S 199.99</P></div>
                             <div class="product-bottom">
-                                   <div class="product-short-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni minima reiciendis ad!</p></div>
+                                   <div class="product-short-description"><p>Figura de acción coleccionable. Art: Nº2529</p></div>
                                    <div class="product-btn"><p><a href="#"></a>Add to Cart</p></div>
                             </div>
                      </div>
@@ -119,7 +118,7 @@
                             </div>
                             <div class="product-new-price"><P>U$S 199.99</P></div>
                             <div class="product-bottom">
-                                   <div class="product-short-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni minima reiciendis ad!</p></div>
+                                   <div class="product-short-description"><p>Figura de acción coleccionable. Art: Nº2530</p></div>
                                    <div class="product-btn"><p><a href="#"></a>Add to Cart</p></div>
                             </div>
                      </div>

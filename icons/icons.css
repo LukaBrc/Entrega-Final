@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?26wt1o');
-  src:  url('fonts/icomoon.eot?26wt1o#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?26wt1o') format('truetype'),
-    url('fonts/icomoon.woff?26wt1o') format('woff'),
-    url('fonts/icomoon.svg?26wt1o#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?5wmv0h');
+  src:  url('fonts/icomoon.eot?5wmv0h#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5wmv0h') format('truetype'),
+    url('fonts/icomoon.woff?5wmv0h') format('woff'),
+    url('fonts/icomoon.svg?5wmv0h#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,30 +25,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-volume:before {
-  content: "\e900";
+.icon-enlarge:before {
+  content: "\e989";
 }
-.icon-volume-mute:before {
-  content: "\e901";
+.icon-shrink:before {
+  content: "\e98a";
 }
-.icon-play:before {
-  content: "\e902";
+.icon-play3:before {
+  content: "\ea1c";
 }
-.icon-pause:before {
-  content: "\e903";
+.icon-pause2:before {
+  content: "\ea1d";
 }
-.icon-stop:before {
-  content: "\e904";
+.icon-stop2:before {
+  content: "\ea1e";
 }
-.icon-first:before {
-  content: "\e905";
+.icon-backward2:before {
+  content: "\ea1f";
 }
-.icon-last:before {
-  content: "\e906";
+.icon-forward3:before {
+  content: "\ea20";
 }
-.icon-fullscreen-exit:before {
-  content: "\e907";
+.icon-volume-medium:before {
+  content: "\ea27";
 }
-.icon-fullscreen:before {
-  content: "\e908";
+.icon-volume-mute2:before {
+  content: "\ea2a";
 }
