@@ -319,10 +319,10 @@ function silenciar(){
        var miSilenBtn = document.querySelector('#mutePlayer')
        if (miVidIntro.volume==0){
               miVidIntro.volume = 1;
-              miSilenBtn.innerHTML='<span class="icon-volume-mute2"></span>'
+              miSilenBtn.innerHTML='<span class="icon-volume-medium></span>'
        }else{
               miVidIntro.volume = 0;
-              miSilenBtn.innerHTML='<span class="icon-volume-medium"></span>'
+              miSilenBtn.innerHTML='<span class="icon-volume-mute2"></span>'
        }
 }
 
